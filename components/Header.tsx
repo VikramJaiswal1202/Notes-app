@@ -2,6 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { shadow } from "@/styles/utils"
 import { Button } from "./ui/button"
+import { ModeToggle } from "./darkModeToggle"
 
 const Header = () => {
     const user = null;
@@ -24,12 +25,16 @@ const Header = () => {
                     "Logout"
                 ) : (
                     <>
-                        <Button asChild>
+                        {/* <Button asChild>
                             <Link href="/login">Login</Link>
                         </Button>
+                        <Button asChild variant="outline" className=" hidden sm:block">
+                            <Link href="/sign-up">SignUp</Link>
+                        </Button> */}
                     </>
                 )
                 }
+                <ModeToggle/>
             </div>
         </header>
     )
